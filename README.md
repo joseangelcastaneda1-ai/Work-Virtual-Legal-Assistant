@@ -4,7 +4,7 @@ A comprehensive AI-Powered legal assistant for immigration attorneys to analyze 
 
 ## 🚀 Quick Start - (Recommended)
 
-**One-Click Deploy:** https://virtual-legal-assistant-1-0.vercel.app
+**One-Click Deploy:** https://work-virtual-legal-assistant.vercel.app/
 
 **Note**: If you don't set the API key, users can still use the app by clicking the "⚙️ Settings" button and entering their own API key.
 
