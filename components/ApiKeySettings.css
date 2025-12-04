@@ -1,0 +1,58 @@
+/* API Key Input Styles - Force visibility in production */
+#apiKey,
+input#apiKey,
+.api-key-input,
+input.api-key-input,
+input[name="apiKey"],
+div input#apiKey,
+div .api-key-input {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: #000000 !important;
+  caret-color: #000000 !important;
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+}
+
+/* Override any white text classes */
+#apiKey.text-white,
+input#apiKey.text-white,
+.api-key-input.text-white {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+#apiKey::placeholder,
+input#apiKey::placeholder,
+.api-key-input::placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+#apiKey:-webkit-autofill,
+#apiKey:-webkit-autofill:hover,
+#apiKey:-webkit-autofill:focus,
+input#apiKey:-webkit-autofill,
+input#apiKey:-webkit-autofill:hover,
+input#apiKey:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  color: #000000 !important;
+}
+
+/* Force text visibility for password inputs too */
+input[type="password"]#apiKey,
+input[type="password"].api-key-input {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  caret-color: #000000 !important;
+}
+
+input[type="text"]#apiKey,
+input[type="text"].api-key-input {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  caret-color: #000000 !important;
+}
+

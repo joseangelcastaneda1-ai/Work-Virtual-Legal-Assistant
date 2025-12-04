@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immigration Attorney AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'blue-900': '#0b4a90',
+              'blue-800': '#083b7a',
+              'blue-700': '#052c63',
+            }
+          }
+        },
+        safelist: [
+          'bg-gradient-to-br',
+          'from-[#0b4a90]',
+          'via-[#083b7a]',
+          'to-[#052c63]',
+          'bg-white/10',
+          'border-white/15',
+          'text-blue-100'
+        ]
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <!-- FileSaver.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- docx -->
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js"></script>
+    <!-- Mammoth.js (for reading .docx) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <!-- Tesseract.js (optional OCR fallback for scanned PDFs) -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.5/dist/tesseract.min.js"></script>
+    <!-- JSZip for modifying Word documents -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+      html, body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Fallback for gradient background in case Tailwind doesn't process it */
+      .gradient-bg {
+        background: linear-gradient(to bottom right, #0b4a90, #083b7a, #052c63);
+        min-height: 100vh;
+      }
+      /* Ensure API key input text is always visible - Multiple selectors for production */
+      #apiKey,
+      input#apiKey,
+      .api-key-input,
+      input.api-key-input,
+      input[type="text"]#apiKey,
+      input[type="password"]#apiKey,
+      input[name="apiKey"],
+      div input#apiKey {
+        color: #000000 !important;
+        background-color: #ffffff !important;
+        -webkit-text-fill-color: #000000 !important;
+        caret-color: #000000 !important;
+        opacity: 1 !important;
+        -webkit-opacity: 1 !important;
+      }
+      #apiKey::placeholder,
+      input#apiKey::placeholder,
+      .api-key-input::placeholder,
+      input[type="text"]#apiKey::placeholder,
+      input[type="password"]#apiKey::placeholder {
+        color: #9ca3af !important;
+        opacity: 1 !important;
+      }
+      #apiKey:-webkit-autofill,
+      #apiKey:-webkit-autofill:hover,
+      #apiKey:-webkit-autofill:focus,
+      input#apiKey:-webkit-autofill,
+      input#apiKey:-webkit-autofill:hover,
+      input#apiKey:-webkit-autofill:focus {
+        -webkit-text-fill-color: #000000 !important;
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        color: #000000 !important;
+        background-color: #ffffff !important;
+      }
+      /* Override any Tailwind text-white classes */
+      #apiKey.text-white,
+      input#apiKey.text-white {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
